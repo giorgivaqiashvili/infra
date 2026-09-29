@@ -14,6 +14,7 @@ module "eks" {
   enable_irsa                              = true
   enable_cluster_creator_admin_permissions = true
 
+# damateba
   access_entries = {
     terraform = {
       principal_arn = "arn:aws:iam::054422645064:user/terraform"
