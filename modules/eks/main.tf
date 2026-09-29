@@ -14,6 +14,21 @@ module "eks" {
   enable_irsa                              = true
   enable_cluster_creator_admin_permissions = true
 
+  access_entries = {
+    terraform = {
+      principal_arn = "arn:aws:iam::054422645064:user/terraform"
+
+      policy_associations = {
+        admin = {
+          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+
+          access_scope = {
+            type = "cluster"
+          }
+        }
+      }
+    }
+  }
   addons = {
     vpc-cni = {
       most_recent    = true
