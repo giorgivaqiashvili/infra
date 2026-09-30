@@ -27,3 +27,18 @@ variable "github_org" {
   description = "GitHub organization or username that owns frontend and backend"
   type        = string
 }
+
+variable "github_owner_id" {
+  description = "GitHub owner ID"
+  type        = string
+}
+
+variable "frontend_repo_id" {
+  description = "GitHub frontend repository ID"
+  type        = string
+}
+
+variable "backend_repo_id" {
+  description = "GitHub backend repository ID"
+  type        = string
+}

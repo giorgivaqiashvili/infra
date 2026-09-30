@@ -15,3 +15,18 @@ variable "github_org" {
   type        = string
   default     = "zenpharma"
 }
+
+variable "github_owner_id" {
+  description = "GitHub owner ID"
+  type        = string
+}
+
+variable "frontend_repo_id" {
+  description = "GitHub frontend repository ID"
+  type        = string
+}
+
+variable "backend_repo_id" {
+  description = "GitHub backend repository ID"
+  type        = string
+}
